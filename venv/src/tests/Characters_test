@@ -1,0 +1,10 @@
+import requests
+
+#
+# def test_gette():
+#     r = requests.get('https://api.github.com/user', auth=('kce@yandex.ru', 'APZrVp83vFNk5F'))
+#     print(r.text())
+#     print(r.status_code)
+#
+# class TestCharackter:
+#     pass
