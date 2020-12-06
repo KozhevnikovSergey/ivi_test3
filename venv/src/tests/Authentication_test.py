@@ -8,11 +8,11 @@ from helpers.CharactersHelper import CharactersHelper
 
 @pytest.mark.usefixtures("api_session")
 class TestCharacters(CharactersHelper):
+
     """
     Проверка получения актеров из БД и проверки корректной передачи данных
     prepare_two_characters: фикстура в которой подготавливает базу и возвращающая двух актеров.
     """
-
     def test_get_characters(self, prepare_two_characters):
         response = self.get_characters()
         result = self.get_result(response)
@@ -29,7 +29,6 @@ class TestCharacters(CharactersHelper):
     Проверка получения актера из БД и проверки корректной передачи данных
     prepare_two_characters: фикстура в которой подготавливает базу и возвращающая двух актеров.
     """
-
     @pytest.mark.parametrize("number_character", [1, 2])
     def test_get_character(self, prepare_two_characters, number_character):
         response = self.get_character(prepare_two_characters[number_character - 1].get("name"))
@@ -58,13 +57,3 @@ class TestCharacters(CharactersHelper):
                                              "данным"
 
         assert self.check_character_in_bd(prepared_character)
-
-    # def test_delete_character(self, prepared_character):
-    #     # prepared_character.update({"weight": 300})
-    #     # response = self.put_character(prepared_character)
-    #     # result = self.get_result(response)
-    #     #
-    #     # assert result == prepared_character, "Результат в ответе на обновление character не соответствует отправленным " \
-    #     #                                      "данным"
-    #     #
-    #     # assert self.check_character_in_bd(prepared_character)
