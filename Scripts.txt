@@ -8,12 +8,13 @@
 8) Добавление character без необходимого поля
 9) Добавление character с неверным типом
 10) Добавление character в бд с 500 character
-11) Добавление character в бд уже есть добавляемый character
+11) Добавление character, в бд уже есть добавляемый character
 12) Изменить character 
 13) Изменить character которого нет в бд
 14) Удалит character
 15) Удалить character с двойным именем
 16) Удалить не существующего character
+
 
 Добавление character
 
@@ -27,7 +28,7 @@
  'http://rest.test.ivi.ru/v2/character'
 
 Шаги:
- 1) Отправить POST запрос на /character, в хедере запроса присутствует 'Content-type: application/json' 
+ 1) Отправить POST запрос на /character, в хедере запроса присутствует 'Content-type: application/json'. В теле json из тестовых данных.
 
 Ожидаемый результат:
  В ответе на запрос пришол ответ с телом:
